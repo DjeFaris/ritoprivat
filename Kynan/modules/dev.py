@@ -1,7 +1,6 @@
 import os
 import subprocess
 import sys
-import shutil
 
 from contextlib import suppress
 from time import sleep
@@ -92,6 +91,7 @@ dispatcher.add_handler(RESTART_HANDLER)
 
 __handlers__ = [LEAVE_HANDLER, GITPULL_HANDLER, RESTART_HANDLER, ALLOWGROUPS_HANDLER]
 
+"""
 @app.on_message(filters.command("clean") & SUDOERS)
 async def clean(_, message):
     dir = "downloads"
@@ -101,3 +101,5 @@ async def clean(_, message):
     os.mkdir(dir)
     os.mkdir(dir1)
     await message.reply_text("Successfully cleaned all **temp** dir(s)!")
+
+"""
